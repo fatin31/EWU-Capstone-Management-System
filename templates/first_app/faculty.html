@@ -1,0 +1,37 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<html>
+    <div class="container py-10">
+        <h1>Faculty Sign UP !!</h1>
+        <form method="POST">
+            {% csrf_token %}
+              <div class="col-md-6">
+                <label for="inputFname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="inputFname" name="fname" placeholder="Jack">
+              </div>
+              <div class="col-md-6">
+                <label for="inputLname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="inputLname" name="lname" placeholder="Zill">
+              </div>
+              <div class="col-md-6">
+                <label for="inputUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="inputUsername" name="username" placeholder="username123">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="password123">
+              </div>
+              <div class="col-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="example@email.com">
+              </div>
+              
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+        </form>
+        <p class="text-center">If you already have an account, <a href="loggin/">Sign Up</a> instead.</p>
+    </div>
+</html
+{% endblock %}
+

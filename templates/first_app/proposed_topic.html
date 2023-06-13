@@ -1,0 +1,54 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<html>       
+<!--Proposed Topic--> 
+<div class="container py-10">
+	<h1>Proposed Topic</h1>
+	<form method="POST">
+		{% csrf_token %}
+		  <div class="col-md-6">
+			<label for="inputTname" class="form-label">Topic Name</label>
+			<input type="text" class="form-control" id="inputTname" name="topicName" placeholder="Topic Name">
+		  </div>
+		  <div class="col-md-6">
+			<label for="inputMem1" class="form-label">Member 1 :</label>
+			<input type="text" class="form-control" id="inputMem1" name="mem1" placeholder="Member Name 1">
+		  </div>
+		  <div class="col-md-6">
+			<label for="inputMem2" class="form-label">Member 2 :</label>
+			<input type="text" class="form-control" id="inputMem2" name="mem2" placeholder="Member Name 2">
+		  </div>
+          <div class="col-md-6">
+			<label for="inputMem3" class="form-label">Member 3 :</label>
+			<input type="text" class="form-control" id="inputMem3" name="mem3" placeholder="Member Name 3">
+		  </div>
+		  <div class="col-md-6">
+			<label for="inputPap1" class="form-label">Paper 1 :</label>
+			<input type="text" class="form-control" id="inputPap1" name="pap1" placeholder="Paper Name 1">
+		  </div>
+		  <div class="col-md-6">
+			<label for="inputPap2" class="form-label">Paper 2 :</label>
+			<input type="text" class="form-control" id="inputPap2" name="pap2" placeholder="Paper Name 2">
+		  </div>
+          <div class="col-md-6">
+			<label for="inputPap3" class="form-label">Paper 3 :</label>
+			<input type="text" class="form-control" id="inputPap3" name="pap3" placeholder="Paper Name 3">
+		  </div>
+          <div class="col-md-6">
+			<label for="inputPap4" class="form-label">Paper 4 :</label>
+			<input type="text" class="form-control" id="inputPap4" name="pap4" placeholder="Paper Name 4">
+		  </div>
+          <div class="col-md-6">
+			<label for="inputPap5" class="form-label">Paper 5 :</label>
+			<input type="text" class="form-control" id="inputPap5" name="pap5" placeholder="Paper Name 5">
+		  </div>
+          <br>
+		  <div class="col-12">
+			<button type="submit" class="btn btn-primary">Register</button>
+		  </div>
+	</form>
+
+</div>
+</html>
+{% endblock %}
+

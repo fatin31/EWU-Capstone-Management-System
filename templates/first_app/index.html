@@ -1,0 +1,31 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<html>
+    <style>
+        .container {
+          position: relative;
+          text-align: center;
+          color: rgb(7, 4, 4);
+        }
+
+        .centered {
+          position: absolute;
+          top: 25%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        </style>
+    <div class="container">
+    {% load static %}
+ 
+    <img src="{% static 'ewu.jpg' %}" width="100%" alt="My image">
+    
+    <div class="centered"><h1>Welcome to EWU Capstone Management System !!!</h1></div>
+    
+    </div>
+    
+   
+  
+</html
+{% endblock %}
+

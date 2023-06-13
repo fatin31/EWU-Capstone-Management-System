@@ -1,0 +1,33 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<html>       
+<!--Set Grade--> 
+<div class="container py-10">
+	<h1>Grade Submit</h1>
+	<form method="POST">
+		{% csrf_token %}
+		  <div class="col-md-6">
+			<label for="inputTname" class="form-label">Topic Name</label>
+			<input type="text" class="form-control" id="inputTname" name="topicName" placeholder="Topic Name">
+		  </div>
+		  <div class="col-md-6">
+			<label for="inputCredit" class="form-label">Credit :</label>
+			<input type="text" class="form-control" id="inputDate" name="credit" placeholder="Credit">
+		  </div>
+          <div class="col-md-6">
+			<label for="inputgrade" class="form-label">Grade :</label>
+			<input type="text" class="form-control" id="inputRoom" name="grade" placeholder="Grade">
+		  </div>
+          <div class="col-md-6">
+			<label for="inputgpa" class="form-label">GPA :</label>
+			<input type="text" class="form-control" id="inputTime" name="gpa" placeholder="GPA">
+		  </div>
+          <br>
+		  <div class="col-12">
+			<button type="submit" class="btn btn-primary">Register</button>
+		  </div>
+	</form>
+
+</div>
+</html>
+{% endblock %}

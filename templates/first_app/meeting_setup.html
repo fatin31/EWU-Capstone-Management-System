@@ -1,0 +1,33 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<html>       
+<!--Set Meeting--> 
+<div class="container py-10">
+	<h1>Meeting Set</h1>
+	<form method="POST">
+		{% csrf_token %}
+		  <div class="col-md-6">
+			<label for="inputTname" class="form-label">Topic Name</label>
+			<input type="text" class="form-control" id="inputTname" name="topicName" placeholder="Topic Name">
+		  </div>
+		  <div class="col-md-6">
+			<label for="inputDate" class="form-label">Date :</label>
+			<input type="date" class="form-control" id="inputDate" name="date" placeholder="16-01-2023">
+		  </div>
+		  <div class="col-md-6">
+			<label for="inputTime" class="form-label">Time :</label>
+			<input type="time" class="form-control" id="inputTime" name="time" placeholder="01:00pm">
+		  </div>
+          <div class="col-md-6">
+			<label for="inputRoom" class="form-label">Room :</label>
+			<input type="text" class="form-control" id="inputRoom" name="room" placeholder="Enter A Office Room">
+		  </div>
+          <br>
+		  <div class="col-12">
+			<button type="submit" class="btn btn-primary">Register</button>
+		  </div>
+	</form>
+
+</div>
+</html>
+{% endblock %}

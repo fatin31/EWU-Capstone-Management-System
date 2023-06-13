@@ -1,0 +1,29 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Topic Name</th>
+      <th scope="col">Credit</th>
+      <th scope="col">Grade</th>
+      <th scope="col">GPA</th>
+    </tr>
+  </thead>
+    <tbody>
+      <b>
+      {% for i in data %}
+      <tr>  
+        <td><b>{{ i }}</b></td> 
+        <td>{{ first_app.Topicname }}</td>
+        <td>{{ first_app.credit }}</td>
+        <td>{{ first_app.grade }}</td>
+        <td>{{ first_app.gpa }}</td>
+      </tr>
+      {% endfor %}
+      </b>
+    </tbody>
+  </table>
+  
+{% endblock %}
+

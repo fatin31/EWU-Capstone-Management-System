@@ -1,0 +1,21 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+</form>
+<html>
+    <h1><center>Welcome to the East West University Capstone Faculty Portal </center><span>{{Student.first_name}} {{Student.objects.last_name}}</span> </h1>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'grp_list' %}">View Groups</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'grade_submit' %}">Publish Grade Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'meeting' %}">Meeting</a>
+        </li>
+        
+      </ul>
+</html
+{% endblock %}
